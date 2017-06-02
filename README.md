@@ -30,7 +30,7 @@ $sender = "my sender id";
 //(varchar)	If your operator supports multiple routes then give one route name. Eg: route=1 for promotional, route=4 for transactional SMS.
 $route = "1";
 //numeric	0 for international,1 for USA, 91 for India.
-$country = "91";
+$country = "Country_code";
 // optional parameters //
 $flash = "1"; //flash=1 (for flash SMS)
 $unicode = ""; //unicode=1 (for unicode SMS)
@@ -138,9 +138,9 @@ msg91 = new Msg91(AUTH_KEY,BASE_URL);
 ```php
 // creating an object of msg91
 msg91 = new Msg91(AUTH_KEY,BASE_URL);
-    $name = "colleagues";  //contact name
-    $mob_no = "7869492590"; //mobile no.
-    $group = "592fd1bdf61e464a558b4572"; // group ID
+    $name = "contact name";  //contact name
+    $mob_no = "mobile no"; //mobile no.
+    $group = "group ID"; // group ID
  
      $data = array( "authkey" => AUTH_KEY,
 	            "name" => $name,
@@ -160,7 +160,7 @@ msg91 = new Msg91(AUTH_KEY,BASE_URL);
 ```php
 // creating an object of msg91
  msg91 = new Msg91(AUTH_KEY,BASE_URL);
-   $contact_id="592ff6d9a31f463f178b4574";  //contact id
+   $contact_id="contact id";  //contact id
 	$data = array( "authkey" => AUTH_KEY,
 		            "contact_id" => $contact_id,
 		          );
