@@ -1,5 +1,4 @@
-# Msg91PhpApiDoc
-# # Msg91
+# Msg91
 
 [![N|Solid](http://images.jdmagicbox.com/indore/t9/0731px731.x731.130801124923.p7t9/catalogue/msg-91-indore-irrtl.jpg)](https://nodesource.com/products/nsolid)
 
@@ -24,7 +23,8 @@ Msg91 PHP API doc .
   ``$msg91 = new Msg91(AUTH_KEY,BASE_URL);``
 - Now ``create SEND_SMS function`` which takes object of $msg91.
 - Now ``Implement the SEND_SMS function as shown follow``
-- ``function SEND_SMS($msg91)``{
+```php
+ function SEND_SMS($msg91){
 $mobiles = "919999999999";
 //(varchar)	Message content to send
 $message = " your text sms will come up here";
@@ -57,7 +57,8 @@ $data = array( "authkey" => AUTH_KEY,
 //Return the client ID on successful registration
 $output = $msg91->textSMS->sendTextSMS($data);
 return $output;
-}
+} 
+```
 
 - As a ``reponse SEND_SMS function print the respons.``
 
@@ -66,7 +67,9 @@ return $output;
 - Create an Object of MSG91 as defined in the `` To Send Text SMS  step 2`` or leave this step if you already created an object 
 - Now Create `` SEND_OTP `` function which takes the MSG91 object as an argument
 - Implement ``SEND_OTP`` function as Follow :
-- `` function SEND_OPT($msg91) ``{
+
+```php
+function SEND_OPT($msg91) {
 	$mobile = "919999999999"; //Keep number in international format (with country code)
 	$message = "Your verification code is ##OTP##."; // Message content to send. (default : Your verification code is ##OTP##.)
 	$sender = "";   //Receiver will see this as sender's ID. (default : OTPSMS)
@@ -82,6 +85,8 @@ return $output;
 	print_r($output);
  }
 
+```
+
 - As a ``reponse SEND_OTP function print the respons.``
 
 # Reseller's Operations
@@ -90,7 +95,10 @@ return $output;
 - Create an Object of MSG91 as defined in the `` To Send Text SMS  step 2`` or leave this step if you already created an object 
 - Now Create `` ADD_CLIENT `` function which takes the MSG91 object as an argument
 - Implement ``ADD_CLIENT`` function as Follow :
-- `` function ADD_CLIENT($msg91) ``{
+
+
+```php
+function ADD_CLIENT($msg91) {
 $user_full_name     =   "fname lname";     //(varchar)	Full name of user
 	$user_name          =   "user_name";   //(varchar) User's name
 	$user_mobile_number =   "user_mobile_number";        //(int) User's mobile
@@ -116,6 +124,9 @@ $user_full_name     =   "fname lname";     //(varchar)	Full name of user
 
 	print_r($output);
 }
+
+```
+
 - As a ``reponse ADD_CLIENT function print the respons.``
 
 
@@ -124,13 +135,18 @@ $user_full_name     =   "fname lname";     //(varchar)	Full name of user
 - Create an Object of MSG91 as defined in the `` To Send Text SMS  step 2`` or leave this step if you already created an object 
 - Now Create `` LIST_CLIENT `` function which takes the MSG91 object as an argument
 - Implement ``LIST_CLIENT`` function as Follow :
-- - `` function LIST_CLIENT($msg91) ``{
+
+
+```php
+function LIST_CLIENT($msg91) {
 	$data = array( "authkey" => AUTH_KEY,
               );
 	//Return the client ID on successful registration
 	$output = $msg91->reseller->listClient($data);
 	print_r($output);
-}
+} ```
+
+
 - As a ``reponse LIST_CLIENT function print the respons.``
 
 # Phonebook's Operations
@@ -140,7 +156,8 @@ $user_full_name     =   "fname lname";     //(varchar)	Full name of user
 - Create an Object of MSG91 as defined in the `` To Send Text SMS  step 2`` or leave this step if you already created an object 
 - Now Create `` ADD_CONTACT `` function which takes the MSG91 object as an argument
 - Implement ``ADD_CONTACT`` function as Follow :
-- - `` function ADD_CONTACT($msg91) ``{
+ ```php
+  function ADD_CONTACT($msg91) {
     $name = "colleagues";  //contact name
     $mob_no = "7869492590"; //mobile no.
     $group = "592fd1bdf61e464a558b4572"; // group ID
@@ -155,7 +172,8 @@ $user_full_name     =   "fname lname";     //(varchar)	Full name of user
 	$output = $msg91->phonebook->addContact($data);
 
 	print_r($output);
-  }
+  } ```
+
   
 - As a ``reponse ADD_CONTACT function print the respons.``
 
@@ -164,7 +182,8 @@ $user_full_name     =   "fname lname";     //(varchar)	Full name of user
 - Create an Object of MSG91 as defined in the `` To Send Text SMS  step 2`` or leave this step if you already created an object 
 - Now Create `` DELETE_CONTACT `` function which takes the MSG91 object as an argument
 - Implement ``DELETE_CONTACT`` function as Follow :
-- - `` function ADD_CONTACT($msg91) ``{
+```
+ function ADD_CONTACT($msg91) ``{
    $contact_id="592ff6d9a31f463f178b4574";  //contact id
 	$data = array( "authkey" => AUTH_KEY,
 		            "contact_id" => $contact_id,
@@ -172,7 +191,8 @@ $user_full_name     =   "fname lname";     //(varchar)	Full name of user
 		//Return the client ID on successful registration
 		$output = $msg91->phonebook->deleteContact($data);
 		print_r($output); 
-   }
+   } ```
+
   
 - As a ``reponse DELETE_CONTACT function print the respons.``
 
