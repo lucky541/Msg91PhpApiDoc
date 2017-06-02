@@ -144,8 +144,8 @@ function LIST_CLIENT($msg91) {
 	//Return the client ID on successful registration
 	$output = $msg91->reseller->listClient($data);
 	print_r($output);
-} ```
-
+} 
+```
 
 - As a ``reponse LIST_CLIENT function print the respons.``
 
@@ -172,7 +172,8 @@ function LIST_CLIENT($msg91) {
 	$output = $msg91->phonebook->addContact($data);
 
 	print_r($output);
-  } ```
+  }
+  ```
   
 - As a ``reponse ADD_CONTACT function print the respons.``
 
@@ -190,7 +191,8 @@ function LIST_CLIENT($msg91) {
 		//Return the client ID on successful registration
 		$output = $msg91->phonebook->deleteContact($data);
 		print_r($output); 
-   } ```
+   } 
+   ```
 
   
 - As a ``reponse DELETE_CONTACT function print the respons.``
