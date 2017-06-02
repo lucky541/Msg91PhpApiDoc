@@ -173,7 +173,6 @@ function LIST_CLIENT($msg91) {
 
 	print_r($output);
   } ```
-
   
 - As a ``reponse ADD_CONTACT function print the respons.``
 
@@ -182,7 +181,7 @@ function LIST_CLIENT($msg91) {
 - Create an Object of MSG91 as defined in the `` To Send Text SMS  step 2`` or leave this step if you already created an object 
 - Now Create `` DELETE_CONTACT `` function which takes the MSG91 object as an argument
 - Implement ``DELETE_CONTACT`` function as Follow :
-```
+```php
  function ADD_CONTACT($msg91) ``{
    $contact_id="592ff6d9a31f463f178b4574";  //contact id
 	$data = array( "authkey" => AUTH_KEY,
