@@ -32,8 +32,6 @@ class Reseller
    function manageClients($data){
 
      $url=$this->baseUrl."manage_client.php"; 
-       echo " manageClients ".$url . "<br >";
-       print_r($data);
        return ProcessData::dataProcess($url,$data);
 
    }
