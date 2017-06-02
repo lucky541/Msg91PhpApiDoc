@@ -34,9 +34,9 @@ onCreateMethod();
 
 function ADD_CONTACT($msg91)
  {
-    $name = "colleagues";  //contact name
-    $mob_no = "7869492590"; //mobile no.
-    $group = "592fd1bdf61e464a558b4572"; // group ID
+    $name = "contact name";  //contact name
+    $mob_no = "$mob_no"; //mobile no.
+    $group = "group ID"; // group ID
  
      $data = array( "authkey" => AUTH_KEY,
 	            "name" => $name,
@@ -66,7 +66,7 @@ function ADD_CONTACT($msg91)
 
  function DELETE_GROUP($msg91)
  {
-	 $group_id = "592fce57a9f909816b8b459a"; //Group ID
+	 $group_id = "group ID"; //Group ID
 
 	$data = array( "authkey" => AUTH_KEY,
 	               "group_id" => $group_id,
@@ -87,10 +87,10 @@ function LIST_GROUP($msg91){
 }
 
 function EDIT_CONTACT($msg91){
-	$contact_id="592ff6d9a31f463f178b4574";  //contact id
-	$group = "592fd1bdf61e464a558b4572"; // group ID
-	$mob_no = "7869492590"; //mobile no.
-	$name = " Officle collegue"; // contact name
+	$contact_id="contact id";  //contact id
+	$group = "group ID"; // group ID
+	$mob_no = "mobile no."; //mobile no.
+	$name = " contact name"; // contact name
 
 	$data = array( "authkey" => AUTH_KEY,
 		            "contact_id" => $contact_id,
@@ -119,7 +119,7 @@ function DELETE_CONTACT($msg91){
 }
 
 function LIST_CONTACT($msg91){
-	$group = "592fd1bdf61e464a558b4572"; // group ID
+	$group = "group ID"; // group ID
 	 
 	$data = array( "authkey" => AUTH_KEY,
 		            "group" => $group,
