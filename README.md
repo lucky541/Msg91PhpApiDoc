@@ -15,9 +15,8 @@ Msg91 PHP API doc .
 - Now Change the base URL in if require or else leave as default
 
 # To Send Text SMS
-
-  - Import the ``Config.php``  
-  - Now ``Create an Object of Msg91's API`` in order to use the functionalities. 
+- Import the ``Config.php``  
+- Now ``Create an Object of Msg91's API`` in order to use the functionalities. 
 
 ```php
 // creating an object of msg91
@@ -55,7 +54,6 @@ $data = array( "authkey" => AUTH_KEY,
 //Return the client ID on successful registration
 $output = $msg91->textSMS->sendTextSMS($data);
 ```
-
 
 # To Send  OTP
 - Import the ``Config.php`` 
