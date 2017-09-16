@@ -1,22 +1,37 @@
 <?php
-require_once('Reseller.php');
-require_once('Phonebook.php');
-require_once('TextSMS.php');
-require_once('OTP.php');
+require_once('apis/OTP.php');
+require_once ('Config.php');
 class Msg91 {
-	public $authKey,$textSMS,$otp,$reseller,$phonebook,$baseUrl;
-	    
-	    
-	    // initialize the authkey at the time of object creation
-	    function __construct($authKey,$baseUrl){
-                 $this->authKey = $authKey;
-                 $this->baseUrl= $baseUrl; // url for the msg91's apis
-                 
-                 $this->reseller = new Reseller($this->authKey,$this->baseUrl);
-                 $this->phonebook = new Phonebook($this->authKey,$this->baseUrl);
-                 $this->textSMS = new TextSMS($this->authKey,$this->baseUrl);
-                 $this->otp = new OTP($this->authKey,$this->baseUrl);
+    private $authKey,$otp,$baseUrl,$textSMS,$reseller,$phonebook;
 
-         	}
-       
+
+    // initialize the authkey at the timecd  of object creation
+    function __construct($authKey){
+        $this->authKey = $authKey; // user's authkey
+        $this->baseUrl= BASE_URL; // url for the msg91's apis
+
+        $this->otp = new OTP($this->authKey,$this->baseUrl); // object for otp services
+    }
+
+    /*** FOR OTP SERVICES ***/
+    # TO SEND OTP
+    public function sendOTP($data)
+    {
+        return $this->otp->sendOTP($data);
+    }
+
+    # TO RESEND OTP
+    public function resendOTP($data)
+    {
+        return $this->otp->resendOTP($data);
+    }
+
+    # TO RESEND OTP
+    public function verifyOTP($data)
+    {
+        return $this->otp->verifyOTP($data);
+    }
+
+
+
 }
