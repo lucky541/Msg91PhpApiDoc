@@ -1,6 +1,4 @@
-# Msg91 PHP API Library
-
-[![N|Solid](http://images.jdmagicbox.com/indore/t9/0731px731.x731.130801124923.p7t9/catalogue/msg-91-indore-irrtl.jpg)](https://msg91.com/)
+#  [Msg91 PHP API Library](http://www.msg91.com)
 
 Msg91 PHP API doc .
 
