@@ -23,135 +23,191 @@ class Msg91
         $this->virtualNumber = new VirtualNumber(BASE_URL);     // object for virtual number services
     }
 
-    /*** FOR OTP APIS ***/
-    # TO SEND OTP
+    /********************************************** FOR OTP API'S **********************************************/
+
+    /**
+     * This is for sending OTP messages.
+     */
     public function sendOTP($data)
     {
         return $this->otp->sendOTP($data);
     }
 
-    # TO RESEND OTP
+    /**
+     * This is for resending OTP message.
+     */
     public function resendOTP($data)
     {
         return $this->otp->resendOTP($data);
     }
 
-    # TO RESEND OTP
+    /**
+     * This is for verifying OTP message.
+     */
     public function verifyOTP($data)
     {
         return $this->otp->verifyOTP($data);
     }
 
-    /*** FOR TEXT SMS APIS ***/
-    # TO RESEND OTP
+    /********************************************** FOR TEXT SMS API'S **********************************************/
+
+    /**
+     * This is for sending text message.
+     */
     public function sendSMS($data)
     {
         return $this->textSMS->sendTextSMS($data);
     }
 
-    /*** FOR TEXT Phonebook APIS ***/
-    # TO RESEND OTP
+    /********************************************** FOR VIRTUAL NUMBERS API'S **********************************************/
+
+    /**
+     * This is for getting load code balance.
+     */
+    function longCodeBalance($data)
+    {
+        return $this->virtualNumber->longCodeBalance($data);
+    }
+
+    /********************************************** FOR Phonebook API'S **********************************************/
+
+    /**
+     * This is for creating Group.
+     */
     public function addGroup($data)
     {
         return $this->phonebook->addGroup($data);
     }
 
+    /**
+     * This is for deleting Group.
+     */
     function deleteGroup($data)
     {
         return $this->phonebook->deleteGroup($data);
     }
 
+    /**
+     * This is for listing Group.
+     */
     function listGroup($data)
     {
         return $this->phonebook->listGroup($data);
     }
 
+    /**
+     * This is for adding contacts to Group.
+     */
     function addContact($data)
     {
         return $this->phonebook->addContact($data);
     }
 
+    /**
+     * This is for editing contacts of Group.
+     */
     function editContact($data)
     {
         return $this->phonebook->editContact($data);
     }
 
+    /**
+     * This is for deleting contacts from Group.
+     */
     function deleteContact($data)
     {
         return $this->phonebook->deleteContact($data);
     }
 
+    /**
+     * This is for listing contacts of Group.
+     */
     function listContact($data)
     {
         return $this->phonebook->listContact($data);
     }
 
 
-    /*** FOR RESELLER'S APIS ***/
-    // for Add Client
+    /********************************************** FOR RESELLER'S API'S **********************************************/
+
+    /**
+     * This is for adding client.
+     */
     function addClient($data)
     {
         return $this->reseller->addClient($data);
     }
 
-    // for List Client
+    /**
+     * This is for listing client.
+     */
     function listClient($data)
     {
         return $this->reseller->listClient($data);
     }
 
-    // for Update Client Balance
+    /**
+     * This is for Updating Client Balance
+     */
     function updateClientsBalance($data)
     {
         return $this->reseller->updateClientsBalance($data);
     }
 
-    // for managing the clients
+    /**
+     * This is for managing the clients
+     */
     function manageClients($data)
     {
         return $this->reseller->manageClients($data);
     }
 
-    // for forget Password
+    /**
+     * This is for forget Password
+     */
     function forgetPassword($data)
     {
         return $this->reseller->forgetPassword($data);
     }
 
-    // for geting Own Profile
+    /**
+     * This is for getting Own Profile
+     */
     function getOwnProfile($data)
     {
         return $this->reseller->getOwnProfile($data);
     }
 
-    // FOR geting CLIENT PROFILE
+    /**
+     * This is for getting client profile
+     */
     function getClientProfile($data)
     {
         return $this->reseller->getClientProfile($data);
     }
 
-    // for geting account expiry
+    /**
+     * This is  for getting account expiry
+     */
     function getAccountExpiryDae($data)
     {
         return $this->reseller->getAccountExpiryDae($data);
     }
 
-    // for reseller to change password
+    /**
+     * This is for reseller to change client's password
+     */
     function changeClientPassword($data)
     {
         return $this->reseller->changeClientPassword($data);
     }
 
-    // get creaditHistory
+    /**
+     * This is for getting creaditHistory
+     */
     function getCreditHistory($data)
     {
         return $this->reseller->getCreditHistory($data);
-    }
-
-    /*** FOR VIRTUAL NUMBERS API ***/
-    function longCodeBalance($data)
-    {
-        return $this->virtualNumber->longCodeBalance($data);
     }
 
 }
