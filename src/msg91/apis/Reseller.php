@@ -3,7 +3,7 @@ require_once('ProcessData.php');
 
 class Reseller
 {
-    public $baseUrl;
+    private $baseUrl;
 
     function __construct($baseUrl)
     {

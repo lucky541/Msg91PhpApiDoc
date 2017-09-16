@@ -4,9 +4,10 @@ require_once('apis/OTP.php');
 require_once('apis/TextSMS.php');
 require_once('apis/Phonebook.php');
 require_once('apis/Reseller.php');
+require_once('apis/VirtualNumber.php');
 class Msg91
 {
-    private $authKey, $otp, $textSMS, $reseller, $phonebook;
+    private $authKey, $otp, $textSMS, $reseller, $phonebook,$virtualNumber;
 
 
     // initialize the authkey at the time of object creation
@@ -18,6 +19,7 @@ class Msg91
         $this->textSMS = new TextSMS(BASE_URL);         // object for otp services
         $this->phonebook = new Phonebook(BASE_URL);    // object for phonebook services
         $this->reseller = new Reseller(BASE_URL);     // object for reseller services
+        $this->virtualNumber = new VirtualNumber(BASE_URL);     // object for virtual number services
     }
 
     /*** FOR OTP APIS ***/
@@ -144,4 +146,11 @@ class Msg91
     {
         return $this->reseller->getCreditHistory($data);
     }
+
+    /*** FOR VIRTUAL NUMBERS API ***/
+    function longCodeBalance($data)
+    {
+        return $this->virtualNumber->longCodeBalance($data);
+    }
+
 }

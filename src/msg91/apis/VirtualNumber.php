@@ -1,7 +1,19 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: walkover
- * Date: 16/9/17
- * Time: 2:14 PM
- */
+
+class VirtualNumber
+{
+    private $baseUrl;
+
+    function __construct($baseUrl)
+    {
+        $this->baseUrl = $baseUrl;
+    }
+
+    // for Add Client
+    function longCodeBalance($data)
+    {
+        $url = $this->baseUrl . "longcodeBalance.php";
+        return ProcessData::dataProcess($url, $data);
+
+    }
+}
