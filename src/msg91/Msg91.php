@@ -5,9 +5,10 @@ require_once('apis/TextSMS.php');
 require_once('apis/Phonebook.php');
 require_once('apis/Reseller.php');
 require_once('apis/VirtualNumber.php');
+
 class Msg91
 {
-    private $authKey, $otp, $textSMS, $reseller, $phonebook,$virtualNumber;
+    private $authKey, $otp, $textSMS, $reseller, $phonebook, $virtualNumber;
 
 
     // initialize the authkey at the time of object creation
