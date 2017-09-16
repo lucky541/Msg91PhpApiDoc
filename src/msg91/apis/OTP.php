@@ -6,10 +6,9 @@ require_once('ProcessData.php');
 */
 class OTP
 {
-  public $authkey,$baseUrl;	
+  private $baseUrl;
 	
- function __construct($authKey,$baseUrl){
-          $this->authKey = $authKey;
+ function __construct($baseUrl){
           $this->baseUrl = $baseUrl;
    } 
 
